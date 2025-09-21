@@ -14,8 +14,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    // origin:[ "https://edviron-assignment-weld.vercel.app","http://localhost:5173"], 
-    origin:["http://localhost:5173"],
+    origin:[ "https://edviron-assignment-school-payment-a.vercel.app/","http://localhost:5173"], 
     methods: ["GET", "POST","PUT","DELETE"],
     credentials: true,
   })
