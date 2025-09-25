@@ -39,7 +39,8 @@ const TransactionDashboard = () => {
       });
       if (!response.ok) throw new Error('Failed to fetch data');
       const data = await response.json();
-      setTransactions(data);
+      // setTransactions(data);
+      setTransactions(Array.isArray(data) ? data : data.transactions || []);
       setError(null);
     } catch (err) {
       setError(err.message);
